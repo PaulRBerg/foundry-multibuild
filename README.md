@@ -1,0 +1,18 @@
+# Foundry Multibuild
+
+A GitHub Action for building a Foundry project with multiple Solidity versions.
+
+Useful if you're building a Solidity project and you want to continuously check that your contracts are
+compatible with all compiler versions allowed by your [version pragma][version-pragma].
+
+## Inputs
+
+Lorem ipsum.
+
+## License
+
+[MIT](./LICENSE.md) © Paul Razvan Berg
+
+<!-- Links -->
+
+[version-pragma]: https://docs.soliditylang.org/en/v0.8.15/layout-of-source-files.html?highlight=pragma#version-pragma

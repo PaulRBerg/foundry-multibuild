@@ -1,0 +1,32 @@
+name: "Foundry Multibuild"
+author: "Paul Razvan Berg"
+branding:
+  color: "yellow"
+  icon: "target"
+description: "Build a Foundry project with multiple Solidity versions"
+inputs:
+  min:
+    description: "Minimum Solidity version to build"
+    required: true
+    default: "0.8.0"
+  max:
+    description: "Maximum Solidity version to build"
+    required: true
+    default: "0.8.15"
+runs:
+  using: "composite"
+  steps:
+    - name: "Install Foundry"
+      uses: "onbjerg/foundry-toolchain@v1"
+      with:
+        version: "nightly"
+
+    - name: "Build the project with all Solidity versions supplied"
+      shell: "bash"
+      run: "./src/multibuild.sh ${{ inputs.min }} ${{ inputs.max }}"
+
+    - name: "Write to job summary"
+      shell: "bash"
+      run: |
+        echo "## Foundry Multibuild" >> $GITHUB_STEP_SUMMARY
+        echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
