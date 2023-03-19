@@ -5,9 +5,19 @@ A GitHub Action for building a Foundry project with multiple Solidity versions.
 Useful if you're building a Solidity project and you want to continuously check that your contracts are
 compatible with all compiler versions allowed by your [version pragma][version-pragma].
 
-## Inputs
+## Manual Use
 
-Lorem ipsum.
+This is how you can run the `multibuild.sh` script directly:
+
+```shell
+./scr/multibuild.sh MIN_VERSION MAX_VERSION
+```
+
+For instance, if you want to build using all Solidity versions from v0.8.0 to v0.8.19, use the following command:
+
+```shell
+./src/multibuild.sh 0.8.0 0.8.19
+```
 
 ## License
 
