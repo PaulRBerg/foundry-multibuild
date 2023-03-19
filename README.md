@@ -15,4 +15,4 @@ This project is licensed under MIT.
 
 <!-- Links -->
 
-[version-pragma]: https://docs.soliditylang.org/en/v0.8.15/layout-of-source-files.html?highlight=pragma#version-pragma
+[version-pragma]: https://docs.soliditylang.org/en/v0.8.19/layout-of-source-files.html?highlight=pragma#version-pragma

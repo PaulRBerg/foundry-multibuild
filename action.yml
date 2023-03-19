@@ -12,14 +12,12 @@ inputs:
   max:
     description: "Maximum Solidity version to build"
     required: true
-    default: "0.8.15"
+    default: "0.8.19"
 runs:
   using: "composite"
   steps:
     - name: "Install Foundry"
       uses: "onbjerg/foundry-toolchain@v1"
-      with:
-        version: "nightly"
 
     - name: "Build the project with all Solidity versions supplied"
       shell: "bash"
