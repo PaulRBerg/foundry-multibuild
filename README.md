@@ -1,8 +1,8 @@
 # Foundry Multibuild
 
-A GitHub Action for building a Foundry project with multiple Solidity versions.
+A GitHub Action for building a Foundry project with a range of Solidity versions.
 
-Useful if you're building a Solidity project and you want to continuously check that your contracts are
+This is useful if you're building a Solidity library and you want to continuously check that your files remain
 compatible with all compiler versions allowed by your [version pragma][version-pragma].
 
 ## Manual Use
