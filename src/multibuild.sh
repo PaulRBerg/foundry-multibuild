@@ -35,7 +35,7 @@ fi
 
 # check if the maximum Solidity version supplied by user is among the supported versions
 if [[ ! " ${supported_versions[*]} " =~ " $max " ]]; then
-    echo "Minimum Solidity version not supported"
+    echo "Maximum Solidity version not supported"
     exit 1
 fi
 
