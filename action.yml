@@ -12,7 +12,7 @@ inputs:
   max:
     description: "Maximum Solidity version to build"
     required: true
-    default: "0.8.19"
+    default: "0.8.23"
 runs:
   using: "composite"
   steps:
