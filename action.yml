@@ -19,12 +19,16 @@ runs:
     - name: "Install Foundry"
       uses: "foundry-rs/foundry-toolchain@v1"
 
-    - name: "Build the project with all Solidity versions supplied"
+    - name: "Add the action path to the runner system path"
+      run: echo "${{ github.action_path }}/src" >> $GITHUB_PATH
+      shell: bash
+
+    - name: "Run the multibuild script"
+      run: multibuild.sh ${{ inputs.min }} ${{ inputs.max }}
       shell: "bash"
-      run: "./src/multibuild.sh ${{ inputs.min }} ${{ inputs.max }}"
 
     - name: "Write to job summary"
-      shell: "bash"
       run: |
-        echo "## Foundry Multibuild Check" >> $GITHUB_STEP_SUMMARY
-        echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
+        echo "## Foundry Multibuild" >> $GITHUB_STEP_SUMMARY
+        echo "✅ Compiled with all Solidity versions from v${{ inputs.min }} to v${{ inputs.max }}" >> $GITHUB_STEP_SUMMARY
+      shell: "bash"
