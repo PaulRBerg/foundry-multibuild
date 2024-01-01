@@ -7,12 +7,16 @@ description: "Test that a Foundry project can be built with a range of Solidity 
 inputs:
   min:
     description: "Minimum Solidity version to build with"
-    required: true
     default: "0.8.0"
+    required: true
   max:
     description: "Maximum Solidity version to build with"
-    required: true
     default: "0.8.23"
+    required: true
+  skip-test:
+    description: "Whether to skip compiling the test directory"
+    default: "true"
+    required: false
 runs:
   using: "composite"
   steps:
@@ -24,7 +28,11 @@ runs:
       shell: bash
 
     - name: "Run the multibuild script"
-      run: multibuild.sh ${{ inputs.min }} ${{ inputs.max }}
+      run: >-
+        multibuild.sh
+        --min ${{ inputs.min }}
+        --max ${{ inputs.max }}
+        --skip-test ${{ inputs.skip-test }}
       shell: "bash"
 
     - name: "Write to job summary"

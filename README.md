@@ -2,8 +2,8 @@
 
 A GitHub Action for testing that a Foundry project can be built with a range of Solidity versions.
 
-This is useful if you've created a reusable Solidity project and you want to continuously check that your files remain
-compatible with all compiler versions allowed by your [version pragma][version-pragma].
+This is useful to continuously check that your Solidity project remains compatible with all compiler versions allowed by
+your [pragma][pragma].
 
 ## Usage
 
@@ -15,14 +15,16 @@ cron schedule, e.g., once per week.
   with:
     min: "0.8.0"
     max: "0.8.23"
+    skip-test: "true"
 ```
 
 ## Inputs
 
-| Name  | Description                            | Default  | Required |
-| ----- | -------------------------------------- | -------- | -------- |
-| `min` | Minimum Solidity version to build with | `0.8.0`  | Yes      |
-| `max` | Maximum Solidity version to build with | `0.8.23` | Yes      |
+| Name        | Required | Default | Description                                  |
+| ----------- | -------- | ------- | -------------------------------------------- |
+| `min`       | Yes      | 0.8.0   | Minimum Solidity version to build with       |
+| `max`       | Yes      | 0.8.23  | Maximum Solidity version to build with       |
+| `skip-test` | No       | True    | Whether to skip compiling the test directory |
 
 ## Examples
 
@@ -38,4 +40,4 @@ This project is licensed under MIT.
 
 <!-- Links -->
 
-[version-pragma]: https://docs.soliditylang.org/en/v0.8.23/layout-of-source-files.html?highlight=pragma#version-pragma
+[pragma]: https://docs.soliditylang.org/en/v0.8.23/layout-of-source-files.html?highlight=pragma#version-pragma
