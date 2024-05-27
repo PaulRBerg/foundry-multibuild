@@ -78,7 +78,7 @@ done
 # Run "forge build" over all versions
 for i in $(seq $mini $maxi); do
   if [[ "$skip_test" == "true" ]]; then
-    forge build --use ${supported_versions[$i]} --skip test
+    forge build --use ${supported_versions[$i]} --skip "./test/**/*.sol"
   else
     forge build --use ${supported_versions[$i]}
   fi
