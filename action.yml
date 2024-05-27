@@ -11,7 +11,7 @@ inputs:
     required: true
   max:
     description: "Maximum Solidity version to build with"
-    default: "0.8.23"
+    default: "0.8.26"
     required: true
   skip-test:
     description: "Whether to skip compiling the test directory"
