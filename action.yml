@@ -11,7 +11,7 @@ inputs:
     required: true
   max:
     description: "Maximum Solidity version to build with"
-    default: "0.8.27"
+    default: "0.8.29"
     required: true
   skip-test:
     description: "Whether to skip compiling the test directory"
@@ -22,6 +22,8 @@ runs:
   steps:
     - name: "Install Foundry"
       uses: "foundry-rs/foundry-toolchain@v1"
+      with:
+        version: "stable"
 
     - name: "Add the action path to the runner system path"
       run: echo "${{ github.action_path }}/src" >> $GITHUB_PATH
@@ -36,7 +38,7 @@ runs:
       shell: "bash"
 
     - name: "Write to job summary"
-      run: |
+      run: | #shell
         echo "## Foundry Multibuild" >> $GITHUB_STEP_SUMMARY
         echo "✅ Compiled with all Solidity versions from v${{ inputs.min }} to v${{ inputs.max }}" >> $GITHUB_STEP_SUMMARY
       shell: "bash"

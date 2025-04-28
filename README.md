@@ -14,7 +14,7 @@ cron schedule, e.g., once per week.
 - uses: PaulRBerg/foundry-multibuild@v1
   with:
     min: "0.8.0"
-    max: "0.8.27"
+    max: "0.8.29"
     skip-test: "true"
 ```
 
@@ -23,7 +23,7 @@ cron schedule, e.g., once per week.
 | Name        | Required | Default | Description                                  |
 | ----------- | -------- | ------- | -------------------------------------------- |
 | `min`       | Yes      | 0.8.0   | Minimum Solidity version to build with       |
-| `max`       | Yes      | 0.8.27  | Maximum Solidity version to build with       |
+| `max`       | Yes      | 0.8.29  | Maximum Solidity version to build with       |
 | `skip-test` | No       | True    | Whether to skip compiling the test directory |
 
 ## Examples
@@ -40,4 +40,4 @@ This project is licensed under MIT.
 
 <!-- Links -->
 
-[pragma]: https://docs.soliditylang.org/en/v0.8.27/layout-of-source-files.html?highlight=pragma#version-pragma
+[pragma]: https://docs.soliditylang.org/en/develop/layout-of-source-files.html#version-pragma
