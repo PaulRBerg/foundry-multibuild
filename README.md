@@ -14,7 +14,7 @@ cron schedule, e.g., once per week.
 - uses: PaulRBerg/foundry-multibuild@v1
   with:
     min: "0.8.0"
-    max: "0.8.29"
+    max: "0.8.30"
     skip-test: "true"
 ```
 
@@ -23,14 +23,14 @@ cron schedule, e.g., once per week.
 | Name        | Required | Default | Description                                  |
 | ----------- | -------- | ------- | -------------------------------------------- |
 | `min`       | Yes      | 0.8.0   | Minimum Solidity version to build with       |
-| `max`       | Yes      | 0.8.29  | Maximum Solidity version to build with       |
+| `max`       | Yes      | 0.8.30  | Maximum Solidity version to build with       |
 | `skip-test` | No       | True    | Whether to skip compiling the test directory |
 
 ## Examples
 
 See how this action is used in the wild:
 
-- [Sablier V2 Core](https://github.com/sablier-labs/v2-core/blob/main/.github/workflows/multibuild.yml)
+- [Sablier Lockup](https://github.com/sablier-labs/lockup/blob/main/.github/workflows/ci-multibuild.yml)
 - [PRBMath](https://github.com/PaulRBerg/prb-math/blob/main/.github/workflows/multibuild.yml)
 - [PRBTest](https://github.com/PaulRBerg/prb-test/blob/main/.github/workflows/multibuild.yml)
 

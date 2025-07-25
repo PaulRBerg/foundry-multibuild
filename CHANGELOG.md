@@ -4,12 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Common Changelog](https://common-changelog.org).
 
+[1.1.4]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.1.4
 [1.1.3]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.1.3
 [1.1.2]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.1.2
 [1.1.1]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.1.1
 [1.1.0]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.1.0
 [1.0.1]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.0.1
 [1.0.0]: https://github.com/PaulRBerg/foundry-multibuild/releases/tag/v1.0.0
+
+## [1.1.4] - 2025-07-25
+
+### Changed
+
+- Add support for Solidity `0.8.30`.
 
 ## [1.1.3] - 2025-04-28
 
